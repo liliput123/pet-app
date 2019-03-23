@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">pet-app</string>
+    <string name="stringHeader">Things to do today</string>
+    <string name="newthingtodo">Write new thing to do today</string>
+    <string name="add">Add</string>
+    <string name="viewtoDoList">View your to do list for today</string>
+</resources>
