@@ -1,14 +1,3 @@
 package com.example.pet_app
 
-class User(var username:String, var password:String, var name: String, var surename: String, age:Int) {
-    var age: Int = 0
-        set(value){
-            if(value<0) throw IllegalArgumentException("Age cannot be negative")
-
-            field=value
-        }
-
-    init{
-        this.age=age
-    }
-}
+class User(val id: String, val name: String, val surname: String, val email: String, val phone: String, val city: String, val password: String)

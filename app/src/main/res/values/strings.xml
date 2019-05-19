@@ -4,4 +4,18 @@
     <string name="newthingtodo">Write new thing to do today</string>
     <string name="add">Add</string>
     <string name="viewtoDoList">View your to do list for today</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="password">Password</string>
+    <string name="city">City</string>
+    <string name="enter_your_surname">Enter your surname</string>
+    <string name="phone">Phone</string>
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="email">Email</string>
+    <string name="enter_your_mobile_phone_number">Enter your mobile phone number</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="repeat_your_password">Repeat your password</string>
+    <string name="surname">Surname</string>
 </resources>
