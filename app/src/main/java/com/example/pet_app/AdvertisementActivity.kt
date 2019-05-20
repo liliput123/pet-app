@@ -12,7 +12,7 @@ import android.support.v7.widget.RecyclerView
 
 
 var advertisementsList = arrayListOf<Advertisement>()
-val user= User("kika", "123aba", "Kristina", "Kristina", "21", "0","0")
+val user= User("kika", "123aba", "Kristina", "Kristina", "21")
 val pet1= Pet("Dog", "Pomeranian", 6, "months", "male", "cute puppy", "pet1")
 val pet2= Pet("Dog", "Pug", 7, "months", "male", "cute puppy", "pet2")
 val pet3= Pet("Dog", "Dobermann", 1, "year", "female", "cute puppy", "pet3")
