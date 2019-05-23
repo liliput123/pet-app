@@ -13,15 +13,9 @@
         </activity>
         <activity android:name=".AdvertisementActivity">
         </activity>
-        <activity android:name=".SignUpActivity">
-        </activity>
         <activity android:name=".DetailsActivity">
         </activity>
-        <activity
-                android:name=".ToDoListActivity"
-                android:parentActivityName=".MainActivity">
-        </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -3,7 +3,6 @@ package com.example.pet_app
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : AppCompatActivity() {
@@ -17,22 +16,22 @@ class SignInActivity : AppCompatActivity() {
         auth=FirebaseAuth.getInstance()
 
         buttonSignIn.setOnClickListener {
-            val email=editTextEmail.text.toString().trim()
-            val password=editTextPassword.text.toString().trim()
+            val email=editTextEmail2.text.toString().trim()
+            val password=editTextPassword3.text.toString().trim()
             val checkerValue= checkEmailAndPassword(email,password)
             if(checkerValue==-1){
-                editTextEmail.error="You need to enter an email address"
-                editTextEmail.requestFocus()
+                editTextEmail2.error="You need to enter an email address"
+                editTextEmail2.requestFocus()
                 return@setOnClickListener
             }
             if(checkerValue==-2){
-                editTextEmail.error="Invalid email format"
-                editTextEmail.requestFocus()
+                editTextEmail2.error="Invalid email format"
+                editTextEmail2.requestFocus()
                 return@setOnClickListener
             }
             if(checkerValue==-3){
-                editTextPassword.error="The password must be at least 6 characters long"
-                editTextPassword.requestFocus()
+                editTextPassword3.error="The password must be at least 6 characters long"
+                editTextPassword3.requestFocus()
                 return@setOnClickListener
             }
 

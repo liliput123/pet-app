@@ -10,32 +10,25 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
-    lateinit var editTextName: EditText
-    lateinit var editTextSurname: EditText
-    lateinit var editTextEmail: EditText
-    lateinit var editTextPassword: EditText
-    lateinit var editTextPassword2: EditText
-    lateinit var buttonSignUp: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        editTextName= findViewById(R.id.editTextName)
-        editTextSurname= findViewById(R.id.editTextSurname)
-        editTextEmail= findViewById(R.id.editTextEmail)
-        editTextPassword= findViewById(R.id.editTextPassword)
-        editTextPassword2= findViewById(R.id.editTextPassword2)
-        buttonSignUp= findViewById(R.id.buttonSignUp2)
 
-
-        buttonSignUp.setOnClickListener {
+        buttonSignUp2.setOnClickListener {
             saveUser()
+
         }
 
         buttonHaveAccountSignIn.setOnClickListener {
             val intent= Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonShowAdvertisements.setOnClickListener {
+            val intent= Intent(this, AdvertisementActivity::class.java)
             startActivity(intent)
         }
     }
@@ -52,22 +45,29 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         val ref = FirebaseDatabase.getInstance().getReference("users")
-        val userId = ref.push().key
-        val user = User(userId, name, surname, email, password)
-        ref.child(userId).setValue(user).addOnCompleteListener {
-             toast("You have signed up successfuly")
-        }
-
         val aut = FirebaseAuth.getInstance()
+
         aut.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
              if (task.isSuccessful) {
-
+                 val userId = ref.push().key
+                 val user = User(userId, name, surname, email)
+                 ref.child(userId).setValue(user).addOnCompleteListener {
+                     toast("You have signed up successfuly")
+                 }
                  //needs to display an activity for the logged in user, but still not created
+                 editTextEmail.text.clear()
+                 editTextName.text.clear()
+                 editTextPassword.text.clear()
+                 editTextPassword2.text.clear()
+                 editTextSurname.text.clear()
+                 val intent= Intent(this, AdvertisementActivity::class.java)
+                 startActivity(intent)
              } else {
                  task.exception?.message?.let {
                  toast(it)
               }
              }
+
         }
     }
 

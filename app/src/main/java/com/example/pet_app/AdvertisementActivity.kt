@@ -5,14 +5,13 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.Collections.unmodifiableMap
 import android.R.*
 import android.support.v7.widget.RecyclerView
 
 
 var advertisementsList = arrayListOf<Advertisement>()
-val user= User("kika", "123aba", "Kristina", "Kristina", "21")
+val user= User("kika", "123aba", "Kristina", "Kristina")
 val pet1= Pet("Dog", "Pomeranian", 6, "months", "male", "cute puppy", "pet1")
 val pet2= Pet("Dog", "Pug", 7, "months", "male", "cute puppy", "pet2")
 val pet3= Pet("Dog", "Dobermann", 1, "year", "female", "cute puppy", "pet3")
