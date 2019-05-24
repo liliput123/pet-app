@@ -1,7 +1,7 @@
 package com.example.pet_app
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
@@ -10,15 +10,18 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
-
+    lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+        auth = FirebaseAuth.getInstance()
 
         buttonSignUp2.setOnClickListener {
+            buttonSignUp2.isEnabled = false
             saveUser()
+            buttonSignUp2.isEnabled = true
 
         }
 
@@ -45,9 +48,9 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         val ref = FirebaseDatabase.getInstance().getReference("users")
-        val aut = FirebaseAuth.getInstance()
 
-        aut.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
              if (task.isSuccessful) {
                  val userId = ref.push().key
                  val user = User(userId, name, surname, email)
@@ -60,8 +63,11 @@ class SignUpActivity : AppCompatActivity() {
                  editTextPassword.text.clear()
                  editTextPassword2.text.clear()
                  editTextSurname.text.clear()
-                 val intent= Intent(this, AdvertisementActivity::class.java)
-                 startActivity(intent)
+
+                 buttonSignUp2.isEnabled = true
+
+                 login()
+
              } else {
                  task.exception?.message?.let {
                  toast(it)
@@ -98,6 +104,14 @@ class SignUpActivity : AppCompatActivity() {
 
         return 0
     }
+
+    /*override fun onStart() {
+        super.onStart()
+
+        auth.currentUser?.let {
+            login()
+        }
+    }*/
 }
 
 

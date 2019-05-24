@@ -2,12 +2,12 @@ package com.example.pet_app
 
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import java.util.Collections.unmodifiableMap
 import android.R.*
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 
 
 var advertisementsList = arrayListOf<Advertisement>()
@@ -23,14 +23,14 @@ val petImages= HashMap<String,Int>()
 
 class AdvertisementActivity : AppCompatActivity() {
 
-    lateinit var rcvAdvertisements: RecyclerView
+    lateinit var rcvAdvertisements: androidx.recyclerview.widget.RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_advertisement)
 
         rcvAdvertisements= findViewById(R.id.rcvAdvertisements)
-        rcvAdvertisements.layoutManager= LinearLayoutManager(this)
+        rcvAdvertisements.layoutManager= androidx.recyclerview.widget.LinearLayoutManager(this)
         rcvAdvertisements.adapter=MainAdapter()
     }
 

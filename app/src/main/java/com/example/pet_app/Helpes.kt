@@ -1,6 +1,7 @@
 package com.example.pet_app
 
 import android.content.Context
+import android.content.Intent
 import android.util.Patterns
 import android.widget.Toast
 
@@ -20,4 +21,9 @@ fun checkEmailAndPassword(email:String, password:String): Int{
     }
 
     return 0 // everything is okay
+}
+
+fun Context.login(){
+    val intent= Intent(this, UserActivity::class.java)
+    startActivity(intent)
 }
