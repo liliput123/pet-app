@@ -1,98 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp" android:layout_marginTop="10dp">
-    <TextView
-            android:layout_width="226dp"
-            android:layout_height="20dp"
-            android:id="@+id/txtCityValue"
-            app:fontFamily="sans-serif-black"
-            android:textColor="@color/colorPrimary" android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtCity"
-            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="2dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtTypeValue"/>
-    <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp" tools:srcCompat="@color/colorPrimaryDark"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="40dp" android:id="@+id/imgPetValue" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="248dp" android:layout_marginRight="248dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
-    <TextView
-            android:layout_width="272dp"
-            android:layout_height="25dp"
-            android:id="@+id/txtTypeValue"
-            android:layout_marginLeft="4dp" android:layout_marginStart="4dp"
-            app:layout_constraintStart_toEndOf="@+id/imgPetValue" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="110dp" android:layout_marginRight="110dp" app:fontFamily="sans-serif-black"
-            android:textColor="@color/colorPrimaryDark" android:textSize="18sp"
-            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="40dp"
-            app:layout_constraintTop_toTopOf="parent"/>
-    <TextView
-            android:text="City: "
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:id="@+id/txtCity"
-            app:layout_constraintStart_toEndOf="@+id/imgPetValue"
-            app:layout_constraintTop_toBottomOf="@+id/txtTypeValue"
-            app:fontFamily="sans-serif-black" android:textSize="16sp" android:textColor="@color/colorPrimary"
-            android:contentDescription="color" android:layout_marginLeft="4dp"
-            android:layout_marginStart="4dp" android:layout_marginTop="2dp"/>
-    <TextView
-            android:text="Contact"
-            android:layout_width="196dp"
-            android:layout_height="20dp"
-            android:id="@+id/txtContact"
-            app:layout_constraintTop_toBottomOf="@+id/txtCityValue" app:layout_constraintStart_toEndOf="@+id/imgPetValue"
-            android:layout_marginLeft="4dp" android:layout_marginStart="4dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="0.0" app:fontFamily="sans-serif-black" android:textSize="16sp"
-            android:textColor="@color/colorPrimary" android:layout_marginTop="24dp"/>
-    <TextView
-            android:layout_width="262dp"
-            android:layout_height="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/txtContactValue1" app:layout_constraintStart_toEndOf="@+id/imgPetValue"
-            android:layout_marginLeft="4dp" android:layout_marginStart="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtContact"
-            app:layout_constraintHorizontal_bias="0.0" android:textSize="14sp" app:fontFamily="sans-serif-black"
-            android:textColor="@color/colorPrimary"/>
-    <TextView
-            android:layout_width="262dp"
-            android:layout_height="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/txtContactValue2" app:layout_constraintStart_toEndOf="@+id/imgPetValue"
-            android:layout_marginLeft="4dp" android:layout_marginStart="4dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtContactValue1"
-            android:textSize="14sp" app:fontFamily="sans-serif-black"
-            android:textColor="@color/colorPrimary"
-            app:layout_constraintHorizontal_bias="0.0"/>
-    <Button
-            android:text="View detaill"
-            android:layout_width="109dp"
-            android:layout_height="17dp"
-            android:id="@+id/buttonDetail" android:layout_marginTop="2dp"
-            app:layout_constraintTop_toBottomOf="@+id/imgPetValue" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0" android:textSize="14sp"
-            android:shadowColor="@color/colorPrimaryDark" android:textColorLink="@color/colorPrimaryDark"
-            android:textColor="@color/colorAccent" android:background="@color/colorPrimaryDark"/>
-    <TextView
-            android:layout_width="179dp"
-            android:layout_height="16dp"
-            android:id="@+id/txtDateValue" android:textSize="12sp" app:fontFamily="sans-serif-black"
-            android:textColor="@color/colorPrimaryDark" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/imgPetValue" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.0"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" android:layout_marginTop="5dp" android:background="@color/colorAccent"
+        android:id="@+id/relativeLayout5">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/common_google_signin_btn_text_dark_default"
+                    android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginStart="5dp"
+                    android:layout_marginRight="5dp" android:layout_marginEnd="5dp" android:layout_marginBottom="5dp"
+                    android:id="@+id/relativeLayout6">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/imagePet"
+                app:srcCompat="@drawable/pet3"
+                android:layout_margin="5dp"/>
+        <TextView
+                android:text="Dog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textType"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imagePet"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColorLink="@color/colorAccent"
+                android:textSize="18sp" android:textColor="@color/colorPrimary" android:textStyle="bold"
+                app:fontFamily="sans-serif-medium"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"/>
+        <TextView
+                android:text="Pug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textRace"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imagePet"
+                android:layout_below="@+id/textType"
+                android:layout_marginRight="5dp"
+                android:textColorLink="@color/colorAccent"
+                android:textSize="18sp" android:textColor="@color/colorPrimary" android:textStyle="bold"
+                app:fontFamily="sans-serif-medium"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"/>
+        <TextView
+                android:text="City"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textCity"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imagePet"
+                android:layout_alignBottom="@+id/imagePet"
+                android:layout_marginRight="5dp"
+                android:textColorLink="@color/colorAccent"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp" android:textColor="@color/colorPrimaryDark" android:textStyle="bold|italic"
+                app:fontFamily="sans-serif-medium"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
