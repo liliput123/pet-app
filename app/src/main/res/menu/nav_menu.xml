@@ -9,4 +9,10 @@
     <item
             android:id="@+id/allAdvertisementsFragment"
             android:title="All Advertisements"/>
+    <item
+            android:id="@+id/changePasswordFragment"
+            android:title="Change password"/>
+    <item
+            android:id="@+id/logOutFragment"
+            android:title="Log Out"/>
 </menu>

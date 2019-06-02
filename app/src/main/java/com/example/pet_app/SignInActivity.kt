@@ -17,6 +17,12 @@ class SignInActivity : AppCompatActivity() {
 
         auth=FirebaseAuth.getInstance()
 
+
+        buttonForgotSignIn.setOnClickListener {
+            val intent= Intent(this, ResetPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         buttonSignIn.setOnClickListener {
             val email=editTextEmail2.text.toString().trim()
             val password=editTextPassword3.text.toString().trim()
@@ -57,11 +63,11 @@ class SignInActivity : AppCompatActivity() {
         }
     }
 
-    /*override fun onStart() {
+    override fun onStart() {
         super.onStart()
 
         auth.currentUser?.let {
             login()
         }
-    }*/
+    }
 }

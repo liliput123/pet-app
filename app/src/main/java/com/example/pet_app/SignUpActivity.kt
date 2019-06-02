@@ -105,13 +105,13 @@ class SignUpActivity : AppCompatActivity() {
         return 0
     }
 
-    /*override fun onStart() {
+    override fun onStart() {
         super.onStart()
 
         auth.currentUser?.let {
             login()
         }
-    }*/
+    }
 }
 
 

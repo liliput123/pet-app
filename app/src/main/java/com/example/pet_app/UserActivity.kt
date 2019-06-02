@@ -1,10 +1,12 @@
 package com.example.pet_app
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_user.*
 
 class UserActivity : AppCompatActivity() {
@@ -25,8 +27,26 @@ class UserActivity : AppCompatActivity() {
                                         drawerLayout)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.option_menu, menu)
         return true
+    }*/
+
+    /*override fun onStart() {
+        super.onStart()
+
+        if (FirebaseAuth.getInstance().currentUser==null){
+            val intent= Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
+    }*/
+
+    override fun onStart() {
+        super.onStart()
+
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            val intent= Intent(this, SignInActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

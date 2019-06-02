@@ -9,5 +9,11 @@
     <fragment android:id="@+id/newAdvertisementFragment" android:name="com.example.pet_app.NewAdvertisementFragment"
               android:label="New Advertisement" tools:layout="@layout/fragment_new_advertisement"/>
     <fragment android:id="@+id/allAdvertisementsFragment" android:name="com.example.pet_app.AllAdvertisementsFragment"
-              android:label="fragment_all_advertisements" tools:layout="@layout/fragment_all_advertisements"/>
+              android:label="All Advertisements" tools:layout="@layout/fragment_all_advertisements"/>
+    <fragment android:id="@+id/changePasswordFragment" android:name="com.example.pet_app.ChangePasswordFragment"
+              android:label="Change Password" tools:layout="@layout/fragment_change_password">
+        <action android:id="@+id/actionPasswodUpdated" app:destination="@id/homeFragment"/>
+    </fragment>
+    <fragment android:id="@+id/logOutFragment" android:name="com.example.pet_app.LogOutFragment"
+              android:label="Log Out" tools:layout="@layout/fragment_log_out"/>
 </navigation>
