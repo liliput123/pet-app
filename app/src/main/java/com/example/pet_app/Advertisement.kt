@@ -6,4 +6,4 @@ import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.*
 
-class Advertisement(val pet: Pet, val user:User, val city:String): Serializable
+class Advertisement(val pet: Pet, val userEmail:String, val city:String): Serializable

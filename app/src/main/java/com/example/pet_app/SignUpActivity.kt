@@ -52,12 +52,17 @@ class SignUpActivity : AppCompatActivity() {
 
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
              if (task.isSuccessful) {
-                 val userId = ref.push().key
-                 val user = User(userId, name, surname, email)
-                 ref.child(userId).setValue(user).addOnCompleteListener {
-                     toast("You have signed up successfuly")
+                 //val userId = ref.push().key
+                 val user = User( name, surname, email) //smeneto userId so email
+                 ref.child(email.md5()).setValue(user).addOnCompleteListener {task->
+                     if(task.isSuccessful) {
+                         toast("You have signed up successfuly")
+                     }
+                     else{
+                         toast(task.exception?.message.toString())
+                     }
                  }
-                 //needs to display an activity for the logged in user, but still not created
+
                  editTextEmail.text.clear()
                  editTextName.text.clear()
                  editTextPassword.text.clear()

@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_advertisement.*
 
 
 var advertisementsList = arrayListOf<Advertisement>()
-val user= User("kika", "123aba", "Kristina", "Kristina")
+val user= User("kika", "123aba", "Kristina@yahoo.com")
 val pet1= Pet("Dog", "Pomeranian", "male", "cute puppy", "pet1")
 val pet2= Pet("Dog", "Pug", "male", "cute puppy", "pet2")
 val pet3= Pet("Dog", "Dobermann", "female", "cute puppy", "pet3")
@@ -32,11 +32,11 @@ class AdvertisementActivity : AppCompatActivity() {
     }
 
     init{
-        advertisementsList.add(Advertisement(pet1,user,"Berlin"))
-        advertisementsList.add(Advertisement(pet2,user,"Hamburg"))
-        advertisementsList.add(Advertisement(pet3,user,"Berlin"))
-        advertisementsList.add(Advertisement(pet4,user,"Stuttgart"))
-        advertisementsList.add(Advertisement(pet5,user,"Hagen"))
+        advertisementsList.add(Advertisement(pet1,"Kristina@yahoo.com","Berlin"))
+        advertisementsList.add(Advertisement(pet2,"Kristina@yahoo.com","Hamburg"))
+        advertisementsList.add(Advertisement(pet3,"Kristina@yahoo.com","Berlin"))
+        advertisementsList.add(Advertisement(pet4,"Kristina@yahoo.com","Stuttgart"))
+        advertisementsList.add(Advertisement(pet5,"Kristina@yahoo.com","Hagen"))
 
         petImages.put("pet1", R.drawable.pet1)
         petImages.put("pet2", R.drawable.pet2)

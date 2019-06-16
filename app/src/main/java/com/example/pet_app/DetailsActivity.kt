@@ -20,7 +20,7 @@ class DetailsActivity : AppCompatActivity() {
         textGenderD.text=advertisement?.pet?.gender
         textCityD.text=advertisement?.city
         textDescriptionD.text=advertisement?.pet?.description
-        textContactD.text=advertisement?.user?.name+": "+advertisement?.user?.email
+        textContactD.text=advertisement?.userEmail
         val imgResource= petImages.get(advertisement?.pet?.imgUrl)
         if (imgResource != null) {
             val img= BitmapFactory.decodeResource(resources, imgResource)

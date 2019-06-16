@@ -4,6 +4,27 @@ import android.content.Context
 import android.content.Intent
 import android.util.Patterns
 import android.widget.Toast
+import java.math.BigInteger
+import java.security.MessageDigest
+import android.provider.SyncStateContract.Helpers.update
+
+
+
+fun String.md5(): String {
+    try {
+        val digest = MessageDigest.getInstance("md5")
+        digest.update(toByteArray())
+        val bytes = digest.digest()
+        val sb = StringBuilder()
+        for (i in bytes.indices) {
+            sb.append(String.format("%02X", bytes[i]))
+        }
+        return sb.toString().toLowerCase()
+    } catch (exc: Exception) {
+        return "" // Impossibru!
+    }
+
+}
 
 fun Context.toast(message:String){
     Toast.makeText(this, message,Toast.LENGTH_LONG).show()
